@@ -6,23 +6,25 @@ import logoImage from '../../assets/image_login.jpg'
 
 export default function Logon(){
     return (
-        <div className="login-container">
-            <img src={logoImage} alt=''/>
+        <div className="container">
+            <div className="login-container">
+                <img src={logoImage} alt=''/>
 
-            <section className="form-container">
-                <form>
-                    <h1>Log-in</h1>
+                <section className="form-container">
+                    <form>
+                        <h1>Log-in</h1>
 
-                    <input placeholder="Username"/>
-                    <input placeholder="Password"/>
+                        <input placeholder="Username"/>
+                        <input placeholder="Password"/>
 
-                    <button><strong>Entrar</strong></button>
+                        <button><strong>Entrar</strong></button>
 
-                    <a>Forgot password</a>
-                </form>
+                        <a>Forgot password</a>
+                    </form>
 
-                <a>Criar conta grátis</a>
-            </section>
+                    <a>Criar conta grátis</a>
+                </section>
+            </div>
         </div>
     );
 }
