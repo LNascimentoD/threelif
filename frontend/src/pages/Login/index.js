@@ -4,7 +4,7 @@ import './styles.css';
 
 import logoImage from '../../assets/image_login.jpg'
 
-export default function Logon(){
+export default function Login(){
     return (
         <div className="container">
             <div className="login-container">
