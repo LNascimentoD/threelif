@@ -1,30 +1,33 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './styles.css';
+import "./styles.css";
 
-import logoImage from '../../assets/image_login.jpg'
+import logoImage from "../../assets/image_login.jpg";
 
-export default function Login(){
-    return (
-        <div className="container">
-            <div className="login-container">
-                <img src={logoImage} alt=''/>
+export default function Login() {
+  return (
+    <div className="container">
+      <div className="login-container">
+        <img src={logoImage} alt="" />
 
-                <section className="form-container">
-                    <form>
-                        <h1>Log-in</h1>
+        <section className="form-container">
+          <form>
+            <h1>Log-in</h1>
 
-                        <input placeholder="Username"/>
-                        <input placeholder="Password"/>
+            <input placeholder="Username" />
+            <input placeholder="Password" />
 
-                        <button><strong>Entrar</strong></button>
+            <button>
+              <strong>Entrar</strong>
+            </button>
 
-                        <a>Forgot password</a>
-                    </form>
+            <Link to="/">Forgot password</Link>
+          </form>
 
-                    <a>Criar conta grátis</a>
-                </section>
-            </div>
-        </div>
-    );
+          <Link to="/register">Criar conta grátis</Link>
+        </section>
+      </div>
+    </div>
+  );
 }
