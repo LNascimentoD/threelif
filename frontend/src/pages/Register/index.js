@@ -3,6 +3,8 @@ import { Component } from "react";
 
 import "./styles.css";
 
+import registerImage from "../../assets/image_register.jpg";
+
 import firebase from "../../fireConnection";
 
 export default class Register extends Component {
@@ -46,29 +48,40 @@ export default class Register extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Seja Bem-Vindo (a). </h1>
-        <h4>Preencha os campos abaixo para Realizar o Cadastro. </h4>
-        <br />
-        <form onSubmit={this.registerUser}>
-          <label> E-mail </label>
-          <br />
-          <input
-            type="email"
-            placeholder="example@example.com"
-            onChange={this.updateEmail}
-          />
-          <br /> <br />
-          <label> Password </label>
-          <br />
-          <input
-            type="password"
-            placeholder="SenhaSegura14"
-            onChange={this.updatePassword}
-          />
-          <br /> <br />
-          <button type="submit">Cadastrar</button>
-        </form>
+      <div className="container">
+        <div className="register-container">
+          <img src={registerImage} alt="" />
+
+          <section className="form-container">
+            <form onSubmit={this.registerUser}>
+              <h1>Registre-se</h1>
+
+              <input type="text"
+                placeholder="Username: Nicemannn"
+                onChange={this.updateEmail}
+              />
+
+              <input type="email"
+                placeholder="Email: example@example.com"
+                onChange={this.updateEmail}
+              />
+
+              <input type="password"
+                placeholder="Password: SenhaSegura14"
+                onChange={this.updatePassword}
+              />
+
+              <input type="password"
+                placeholder="Confirme a senha"
+                onChange={this.updatePassword}
+              />
+
+              <button type="submit">
+                <strong>Cadastrar</strong>
+              </button>
+            </form>
+          </section>
+        </div>
       </div>
     );
   }

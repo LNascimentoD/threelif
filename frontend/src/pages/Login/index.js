@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-import logoImage from "../../assets/image_login.jpg";
+import loginImage from "../../assets/image_login.jpg";
 
 export default function Login() {
   return (
     <div className="container">
       <div className="login-container">
-        <img src={logoImage} alt="" />
+        <img src={loginImage} alt="" />
 
         <section className="form-container">
           <form>
