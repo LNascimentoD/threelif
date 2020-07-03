@@ -12,13 +12,19 @@ export default class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
       email: "",
       password: "",
     };
 
+    this.updateName = this.updateName.bind(this);
     this.updateEmail = this.updateEmail.bind(this);
     this.updatePassword = this.updatePassword.bind(this);
     this.registerUser = this.registerUser.bind(this);
+  }
+
+  updateName(event) {
+    this.setState({ name: event.target.value });
   }
 
   updateEmail(event) {
@@ -33,7 +39,6 @@ export default class Register extends Component {
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(alert("Usuário Cadastrado com Sucesso."))
       .catch((error) => {
         if (error.code === "auth/invalid-email") {
           alert("E-mail Inválido");
@@ -59,8 +64,7 @@ export default class Register extends Component {
                   <FaArrowAltCircleLeft size={40} color="#fe7600" />
                 </Link>
                 <a href="/register" className="titulo">
-                  {" "}
-                  Register{" "}
+                  Register
                 </a>
                 <Link to="/">
                   <FaHome size={40} color="#fe7600" />
@@ -69,29 +73,33 @@ export default class Register extends Component {
               <input
                 type="text"
                 placeholder="Username: Nicemannn"
-                onChange={this.updateEmail}
+                value={this.state.name}
+                onChange={this.updateName}
               />
               <input
                 type="email"
                 placeholder="Email: example@example.com"
+                value={this.state.email}
                 onChange={this.updateEmail}
               />
               <input
                 type="password"
                 placeholder="Password: SenhaSegura14"
+                value={this.state.password}
                 onChange={this.updatePassword}
               />
               <input
                 type="password"
                 placeholder="Confirme a senha"
+                value={this.state.password}
                 onChange={this.updatePassword}
               />
               <button type="submit">
-                <strong> Cadastrar </strong>{" "}
-              </button>{" "}
-            </form>{" "}
-          </section>{" "}
-        </div>{" "}
+                <strong> Cadastrar </strong>
+              </button>
+            </form>
+          </section>
+        </div>
       </div>
     );
   }
