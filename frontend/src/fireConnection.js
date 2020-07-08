@@ -3,15 +3,16 @@ import "firebase/database";
 import "firebase/auth";
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCX-OIW_oxFlTyW2poEg_Twu8qSEpQuwyo",
-    authDomain: "threelif-db542.firebaseapp.com",
-    databaseURL: "https://threelif-db542.firebaseio.com",
-    projectId: "threelif-db542",
-    storageBucket: "threelif-db542.appspot.com",
-    messagingSenderId: "613372439720",
-    appId: "1:613372439720:web:5409ca2c8b5c06edff269d",
-    measurementId: "G-NB9FCHT0Z1",
+    apiKey: "AIzaSyCTwJQ17IO8mudZwzJdYwNpNCDzY6wnCSE",
+    authDomain: "reactapp-5ecef.firebaseapp.com",
+    databaseURL: "https://reactapp-5ecef.firebaseio.com",
+    projectId: "reactapp-5ecef",
+    storageBucket: "reactapp-5ecef.appspot.com",
+    messagingSenderId: "883453830850",
+    appId: "1:883453830850:web:1167c32dc477698e567d5b",
+    measurementId: "G-DKV28JRFLE"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 

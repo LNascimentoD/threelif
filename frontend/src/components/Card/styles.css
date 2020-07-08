@@ -1,6 +1,6 @@
-.card-container{
+.card-container-principal{
     margin-right: 20px;
-    padding: 10px;
+
 
     max-width: 25%;
     width: 100%;
@@ -8,5 +8,33 @@
 
     border-radius: 20px;
 
-    background-color: yellowgreen;
+    background-color: #F24405;
+
+    color: black;
+}
+
+
+.card-container{
+    margin-right: 20px;
+    
+    max-width: 25%;
+    width: 95%;
+    height: 60%;
+    
+    border-radius: 20px;
+    
+    background-color: #F29F05;
+    
+}
+
+h1{
+    margin: 10px;
+}
+        
+h3{
+    margin: 10px;
+}
+        
+p{
+    margin-left: 10px;
 }

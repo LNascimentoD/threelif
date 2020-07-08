@@ -23,11 +23,13 @@ export default function Dashboard(){
                 <div className="cards-container">
                     <h1>Suas Refeições</h1>
                     <div className="cards">
-                        <Card />
+                        <Card classe="card-container-principal"/>
                         <br />
-                        <Card />
+                        <Card classe="card-container"/>
                         <br />
-                        <Card />
+                        <Card classe="card-container"/>
+                        <br />
+                        <Card classe="card-container"/>
                     </div>
                 </div>
             </div>
